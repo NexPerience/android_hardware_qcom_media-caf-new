@@ -1,5 +1,6 @@
 /*--------------------------------------------------------------------------
 Copyright (c) 2010-2013, Linux Foundation. All rights reserved.
+Copyright (c) 2014, klozz jesus 
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -3289,8 +3290,8 @@ OMX_ERRORTYPE  omx_video::empty_this_buffer_proxy(OMX_IN OMX_HANDLETYPE         
         // Graphic-source meta-buffers queued with opaque color-format
         if (media_buffer->buffer_type == kMetadataBufferTypeGrallocSource) {
             private_handle_t *handle = (private_handle_t *)media_buffer->meta_handle;
-            //fd = handle->fd; original
-            Input_pmem_info.fd = handle->fd;
+            fd = Input_pmem_info.fd;
+            fd = handle->fd;
             DEBUG_PRINT_LOW("ETB (opaque-gralloc) fd = %d, size = %d",
                     fd, handle->size);
         } else {
