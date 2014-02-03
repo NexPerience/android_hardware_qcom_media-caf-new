@@ -107,7 +107,7 @@ int frame_parse::init_start_codes (codec_type codec_type_parse)
             mask_code = H263_mask_code;
             break;
         case CODEC_TYPE_H264:
-        case CODEC_TYPE_HEVC:
+        //case CODEC_TYPE_HEVC: maybe not usable for now :/ --TEAMMEX--
             start_code = H264_start_code;
             mask_code = H264_mask_code;
             break;
